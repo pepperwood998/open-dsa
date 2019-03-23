@@ -1,8 +1,11 @@
-#include <Test.hpp>
+#include <SinglyLinkedList.hpp>
 
 int main ()
 {
-    od::SayHello();
+    SinglyLinkedList list;
+    list.AddToHead(3);
+    list.AddToHead(10);
+    list.Print();
 
     return 0;
 }

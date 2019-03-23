@@ -2,7 +2,10 @@
 add_library(
     open-dsa STATIC
     "include/Test.hpp"
+    "include/SinglyLinkedList.hpp"
+
     "src/Test.cpp"
+    "src/SinglyLinkedList.cpp"
 )
 
 target_include_directories(open-dsa PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
