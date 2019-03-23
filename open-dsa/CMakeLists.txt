@@ -1,6 +1,6 @@
 
 add_library(
-    open-dsa SHARED
+    open-dsa STATIC
     "include/Test.hpp"
     "src/Test.cpp"
 )
