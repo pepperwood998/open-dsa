@@ -1,10 +1,8 @@
 
 add_library(
     open-dsa STATIC
-    "include/Test.hpp"
     "include/SinglyLinkedList.hpp"
 
-    "src/Test.cpp"
     "src/SinglyLinkedList.cpp"
 )
 

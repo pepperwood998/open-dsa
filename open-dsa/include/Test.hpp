@@ -1,4 +1,0 @@
-namespace od
-{
-    void SayHello ();
-}
