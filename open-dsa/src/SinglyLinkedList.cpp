@@ -39,6 +39,53 @@ void SinglyLinkedList::AddToTail (int data)
     _tail = node;
 }
 
+int SinglyLinkedList::DeleteFromHead ()
+{
+    if (this->isEmpty()) return -1;
+
+    Node *temp = _head;
+    int data = temp->_data;
+
+    // check if there is only 1 node
+    if (_head == _tail)
+    {
+        _head = _tail = nullptr;
+    } else
+    {
+        _head = _head->_next;
+    }
+
+    delete temp;
+    return data;
+}
+
+int SinglyLinkedList::DeleteFromTail ()
+{
+    if (this->isEmpty()) return -1;
+
+    Node *temp = _tail;
+    int data = _tail->_data;
+
+    // check if there is only 1 node
+    if (_head == _tail)
+    {
+        _head = _tail = nullptr;
+    } else
+    {
+        Node *it = _head;
+        while (it->_next != _tail)
+        {
+            it = it->_next;
+        }
+        
+        _tail = it;
+        it->_next = nullptr;
+    }
+    
+    delete temp;
+    return data;
+}
+
 void SinglyLinkedList::Print () const
 {
     Node *node = _head;
