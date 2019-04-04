@@ -25,6 +25,20 @@ void SinglyLinkedList::AddToHead (int data)
     }
 }
 
+void SinglyLinkedList::AddToTail (int data)
+{
+    Node *node = new Node(data);
+    if (this->isEmpty())
+    {
+        _head = node;
+    } else
+    {
+        _tail->_next = node;
+    }
+
+    _tail = node;
+}
+
 void SinglyLinkedList::Print () const
 {
     Node *node = _head;

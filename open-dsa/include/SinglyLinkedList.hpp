@@ -24,6 +24,7 @@ public:
 
     bool isEmpty () { return _head == nullptr; }
     void AddToHead (int data);
+    void AddToTail (int data);
 
     void Print () const;
 };
