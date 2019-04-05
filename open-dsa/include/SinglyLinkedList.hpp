@@ -27,6 +27,7 @@ public:
     void AddToTail (int data);
     int DeleteFromHead ();
     int DeleteFromTail ();
+    void DeleteNode (int);
 
     void Print () const;
 };

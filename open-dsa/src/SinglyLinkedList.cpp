@@ -86,6 +86,42 @@ int SinglyLinkedList::DeleteFromTail ()
     return data;
 }
 
+void SinglyLinkedList::DeleteNode (int data)
+{
+    if (this->isEmpty()) return;
+
+    if (data == _head->_data)
+    {
+        if (_head == _tail)
+        {
+            delete _head;
+            _head = _tail = nullptr;
+        } else
+        {
+            Node *temp = _head;
+            _head = _head->_next;
+            delete temp;
+        }
+    } else
+    {
+        Node *prev = _head;
+        Node *it = _head->_next;
+        while (it != nullptr && data != it->_data)
+        {
+            prev = prev->_next;
+            it = it->_next;
+        }
+
+        if (it != nullptr)
+        {
+            prev->_next = it->_next;
+            if (it == _tail) _tail = prev;
+
+            delete it;
+        }
+    }
+}
+
 void SinglyLinkedList::Print () const
 {
     Node *node = _head;
