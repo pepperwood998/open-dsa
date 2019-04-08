@@ -2,7 +2,7 @@
 
 int main ()
 {
-    SinglyLinkedList list;
+    SinglyLinkedList<int> list;
     list.AddToTail(99);
     list.AddToHead(3);
     list.AddToTail(12);

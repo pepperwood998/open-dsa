@@ -1,19 +1,9 @@
 
-add_library(
-    open-dsa STATIC
-    "include/SinglyLinkedList.hpp"
+add_library(open-dsa INTERFACE)
 
-    "src/SinglyLinkedList.cpp"
-)
-
-target_include_directories(open-dsa PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
+target_include_directories(open-dsa INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/ds")
 
 install(
-    DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include"
+    DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/ds"
     DESTINATION "${CMAKE_CURRENT_BINARY_DIR}"
-)
-
-install(
-    TARGETS open-dsa
-    DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/lib"
 )
