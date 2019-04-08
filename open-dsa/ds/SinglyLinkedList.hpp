@@ -23,13 +23,13 @@ public:
     SinglyLinkedList ();
     ~SinglyLinkedList ();
 
-    bool isEmpty () { return _head == nullptr; }
     void AddToHead (T data);
     void AddToTail (T data);
     T DeleteFromHead ();
     T DeleteFromTail ();
-    void DeleteNode (T);
+    void DeleteNode (T data);
 
+    bool isEmpty () const { return _head == nullptr; }
     void Print () const;
 };
 
