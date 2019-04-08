@@ -131,6 +131,18 @@ void SinglyLinkedList<T>::DeleteNode (T data)
 }
 
 template <class T>
+bool SinglyLinkedList<T>::contain(T data) const
+{
+    Node *it = _head;
+    while (it != nullptr && data != it->_data)
+    {
+        it = it->_next;
+    }
+
+    return it != nullptr;
+}
+
+template <class T>
 void SinglyLinkedList<T>::Print () const
 {
     Node *node = _head;
