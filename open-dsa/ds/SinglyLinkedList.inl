@@ -20,9 +20,10 @@ SinglyLinkedList<T>::~SinglyLinkedList ()
 }
 
 template <class T>
-void SinglyLinkedList<T>::AddToHead (T data)
+void SinglyLinkedList<T>::AddToHead (const T &data)
 {
     _head = new Node(data, _head);
+
     if (_tail == nullptr)
     {
         _tail = _head;
@@ -30,9 +31,10 @@ void SinglyLinkedList<T>::AddToHead (T data)
 }
 
 template <class T>
-void SinglyLinkedList<T>::AddToTail (T data)
+void SinglyLinkedList<T>::AddToTail (const T &data)
 {
     Node *node = new Node(data);
+
     if (this->isEmpty())
     {
         _head = node;
@@ -94,7 +96,7 @@ T SinglyLinkedList<T>::DeleteFromTail ()
 }
 
 template <class T>
-void SinglyLinkedList<T>::DeleteNode (T data)
+void SinglyLinkedList<T>::DeleteNode (const T &data)
 {
     if (this->isEmpty()) return;
 
@@ -113,27 +115,29 @@ void SinglyLinkedList<T>::DeleteNode (T data)
     } else
     {
         Node *prev = _head;
-        Node *it = _head->_next;
-        while (it != nullptr && data != it->_data)
+        Node *curr = _head->_next;
+
+        while (curr != nullptr && data != curr->_data)
         {
             prev = prev->_next;
-            it = it->_next;
+            curr = curr->_next;
         }
 
-        if (it != nullptr)
+        if (curr != nullptr)
         {
-            prev->_next = it->_next;
-            if (it == _tail) _tail = prev;
+            prev->_next = curr->_next;
+            if (curr == _tail) _tail = prev;
 
-            delete it;
+            delete curr;
         }
     }
 }
 
 template <class T>
-bool SinglyLinkedList<T>::contain(T data) const
+bool SinglyLinkedList<T>::contain(const T &data) const
 {
     Node *it = _head;
+    
     while (it != nullptr && data != it->_data)
     {
         it = it->_next;

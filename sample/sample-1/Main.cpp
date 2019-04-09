@@ -9,6 +9,7 @@ int main ()
     list.AddToTail(12);
     list.AddToHead(10);
     list.Print();
+    std::cout << "\n";
     std::cout << list.contain(9) << std::endl;
     std::cout << list.contain(99) << std::endl;
 

@@ -11,7 +11,7 @@ private:
         T _data;
         Node *_next;
 
-        Node (T data = 0, Node *next = nullptr)
+        Node (const T &data = 0, Node *next = nullptr)
             : _data(data), _next(next)
         {}
     };
@@ -23,13 +23,13 @@ public:
     SinglyLinkedList ();
     ~SinglyLinkedList ();
 
-    void AddToHead (T data);
-    void AddToTail (T data);
+    void AddToHead (const T &data);
+    void AddToTail (const T &data);
     T DeleteFromHead ();
     T DeleteFromTail ();
-    void DeleteNode (T data);
+    void DeleteNode (const T &data);
 
-    bool contain (T data) const;
+    bool contain (const T &data) const;
     bool isEmpty () const { return _head == nullptr; }
     void Print () const;
 };
