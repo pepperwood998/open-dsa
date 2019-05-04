@@ -6,10 +6,10 @@ target_link_libraries(sample-2 PRIVATE open-dsa)
 
 install(
     TARGETS sample-1
-    DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/bin"
+    DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/../bin/sample"
 )
 
 install(
     TARGETS sample-2
-    DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/bin"
+    DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/../bin/sample"
 )
