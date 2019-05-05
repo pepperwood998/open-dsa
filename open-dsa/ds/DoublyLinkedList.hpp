@@ -30,6 +30,7 @@ public:
     T DeleteFromTail ();
     void DeleteNode (T data);
 
+    bool contain (const T &data) const;
     bool isEmpty () const { return _head == nullptr; }
     void Print () const;
 };

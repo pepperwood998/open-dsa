@@ -119,6 +119,20 @@ void DoublyLinkedList<T>::DeleteNode (T data)
 }
 
 template <class T>
+bool DoublyLinkedList<T>::contain (const T &data) const
+{
+    Node *it = _head;
+
+    while (it != nullptr && data != it->_data)
+    {
+        it = it->_next;
+    }
+
+    return it != nullptr;
+}
+
+
+template <class T>
 void DoublyLinkedList<T>::Print () const
 {
     Node *it = _head;
