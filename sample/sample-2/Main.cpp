@@ -1,7 +1,7 @@
 #include <DoublyLinkedList.hpp>
 #include <iostream>
 
-int main ()
+int main()
 {
     DoublyLinkedList<float> some_list;
     some_list.AddToTail(6969.0f);

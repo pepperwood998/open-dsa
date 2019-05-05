@@ -1,7 +1,7 @@
 #include <SinglyLinkedList.hpp>
 #include <iostream>
 
-int main ()
+int main()
 {
     SinglyLinkedList<int> list;
     list.AddToTail(99);
