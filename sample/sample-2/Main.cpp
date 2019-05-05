@@ -1,4 +1,4 @@
-#include <DoublyLinkedList.hpp>
+#include <ds/DoublyLinkedList.hpp>
 #include <iostream>
 
 int main()

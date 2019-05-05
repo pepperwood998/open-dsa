@@ -1,4 +1,4 @@
-#include <SinglyLinkedList.hpp>
+#include <ds/SinglyLinkedList.hpp>
 #include <iostream>
 
 int main()
