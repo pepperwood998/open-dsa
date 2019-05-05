@@ -21,7 +21,7 @@ DoublyLinkedList<T>::~DoublyLinkedList()
 }
 
 template <class T>
-void DoublyLinkedList<T>::AddToHead(T data)
+void DoublyLinkedList<T>::AddToHead(const T &data)
 {
     _head = new Node(data, nullptr, _head);
 
@@ -36,7 +36,7 @@ void DoublyLinkedList<T>::AddToHead(T data)
 }
 
 template <class T>
-void DoublyLinkedList<T>::AddToTail(T data)
+void DoublyLinkedList<T>::AddToTail(const T &data)
 {
     if (_tail == nullptr)
     {
@@ -96,7 +96,7 @@ T DoublyLinkedList<T>::DeleteFromTail()
 }
 
 template <class T>
-void DoublyLinkedList<T>::DeleteNode(T data)
+void DoublyLinkedList<T>::DeleteNode(const T &data)
 {
     if (this->isEmpty())
         return;
