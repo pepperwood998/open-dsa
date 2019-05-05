@@ -49,7 +49,7 @@ void SinglyLinkedList<T>::AddToTail (const T &data)
 template <class T>
 T SinglyLinkedList<T>::DeleteFromHead ()
 {
-    if (this->isEmpty()) return -1;
+    if (this->isEmpty()) return T();
 
     Node *temp = _head;
     T data = temp->_data;
@@ -70,7 +70,7 @@ T SinglyLinkedList<T>::DeleteFromHead ()
 template <class T>
 T SinglyLinkedList<T>::DeleteFromTail ()
 {
-    if (this->isEmpty()) return -1;
+    if (this->isEmpty()) return T();
 
     Node *temp = _tail;
     T data = _tail->_data;
